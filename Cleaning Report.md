@@ -19,3 +19,6 @@ SELECT *
 FROM `bellabeat-case-study-321019.BellaBeat_Analysis.Working_Table`
 WHERE Calories>0 AND TotalDistance>0
 ```
+3. I then downloaded and prepare to export the data into Google Sheets for the final steps of the cleaning process
+
+[FitBit_Data.csv](https://github.com/ToeKnee013/Capstone-Project-BellaBeat/files/6978276/FitBit_Data.csv)
