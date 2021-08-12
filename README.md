@@ -5,3 +5,4 @@ Sršen the cofounder and Chief Creative Officer at Bellabeat, a tech manufacture
 1. What are some trends in smart device usage?
 2. How could these trends apply to Bellabeat customers?
 3. How could these trends help influence Bellabeat marketing strategy?
+I will identify 3 trends within the data that could influence Bellabeats' marketing strategy.
