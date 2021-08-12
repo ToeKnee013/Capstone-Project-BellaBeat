@@ -1,4 +1,4 @@
-# Capstone-Project-BellaBeat
+# Google Data Analytics: Capstone Project
 ## BellaBeat
 ## Project Overview
 I am a junior analyst working for **Bellabeat**, a high-tech manufacturer of health-focused products for women. **Urška Sršen**, cofounder and Chief Creative Officer of Bellabeat, believes that analyzing smart device fitness data could help unlock new growth oppurtunities for the company. I have been asked to focus on one of Bellabeat's products and analyze smart device data to gain insight into how consumers are using their smart devices. I will use the insights discovered to help guide the companys marketing strategy and make high-level recommendations.
