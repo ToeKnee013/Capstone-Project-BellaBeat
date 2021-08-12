@@ -18,5 +18,5 @@ Urška Sršen encourages me to use public data on Kaggle that explores smart dev
 The tools used for this analysis will be Bigquery SQL and Google Sheets
 ## Analyze
 I chose to find trends that could provide insight into these following questions
-1. Does total steps correlate with total calories burned?
+1. Does total distance correlate with total calories burned?
 2. Do levels of intensity affect calories burned?
