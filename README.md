@@ -9,3 +9,6 @@ Sršen the cofounder and Chief Creative Officer at Bellabeat, a tech manufacture
 3. How could these trends help influence Bellabeat marketing strategy?
 
 I will identify 3 trends within the data that could influence Bellabeat's marketing strategy.
+## Prepare
+Urška Sršen encourages me to use public data on Kaggle that explores smart device users' daily habits.\
+[FitBit Fitness Tracker Data](https://www.kaggle.com/arashnic/fitbit) this Kaggle data set contains personal fitness tracker from about thirty fitbit users.
