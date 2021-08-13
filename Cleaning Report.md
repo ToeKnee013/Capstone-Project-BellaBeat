@@ -24,4 +24,4 @@ WHERE Calories>0 AND TotalDistance>0
 [FitBit_Data.csv](https://github.com/ToeKnee013/Capstone-Project-BellaBeat/files/6978276/FitBit_Data.csv)
 
 4.   I imported the file into Google Sheets and made a seperate copy of the original sheet so that I can refer back to it if needed. In the "Copy of FitBit Data" I then proceeded to format columns C:G to only show the numbers in the cells up to the hundredths place for a much cleaner table.
-5.   Still in the "Copy of FitBit Data" sheet, I sort all the cells in the sheet by the "Id" header row A to Z and its ready for analysis!
+5.   Still in the "Copy of FitBit Data" sheet, I sort all the cells in the sheet by the "Id" header row A to Z and its ready for analysis! here is the final product of the cleaned table [FitBitData](https://docs.google.com/spreadsheets/d/1nrvda6w7dXlXnBXhhRo4ivpMc5a31Emi9eh5vpt0WJw/edit?usp=sharing)
