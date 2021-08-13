@@ -23,7 +23,7 @@ To summarize, I made the follwing changes:
 * In the new table, I filtered out any rows where calories and distance equal zero ```WHERE Calories>0 AND TotalDistance>0```
 * Exported and imported file into Google Sheets now named "FitBit Data"
 * Made a copy of the original sheet to work on and formatted all the cells with decimal places to the nearest hundredths place
-* Sort the sheet by the "Id" header row A to Z
+* Sorted the sheet by the "Id" header row A to Z
 ## Analyze
 I chose to find trends that could provide insight into these following questions
 1. Does total distance correlate with total calories burned?
