@@ -28,3 +28,18 @@ To summarize, I made the follwing changes:
 I chose to find trends that could provide insight into these following questions
 1. Does total distance correlate with total calories burned?
 2. Do levels of intensity affect calories burned?
+
+Assumptions for the analysis:
+* Strictly working with this dataset [FitBit_Data.csv](https://github.com/ToeKnee013/Capstone-Project-BellaBeat/files/7009212/FitBit_Data.csv) for the analysis
+* Calories burned is linked to weight loss
+* "Calories" in the data refers to calories burned
+* "Distance" doesn't have a specified metric system in this data therefore, I will still assume that the bigger the "distance" number, the greater the general distance is covered
+
+With these metrics for the analysis set, the most important variables to look at with the given data are *Distance* and *Calories*. In the end, I developed four simple charts for the analysis.
+![Total Distance vs  Total Calories](https://user-images.githubusercontent.com/88196954/129946417-ccb9f333-d9eb-457c-93b2-0807cec587db.png)
+![Total Light Active Distance vs  Total Light Active Calories](https://user-images.githubusercontent.com/88196954/129946767-2e83841b-59bc-4bb1-9601-72de51d441a6.png)
+![Total Moderately Active Distance vs  Total Moderate Calories](https://user-images.githubusercontent.com/88196954/129946783-ee7a1bf5-6d64-4f59-83e1-da0b9e14b94c.png)
+![Total Very Active Distance vs  Total Very Active Calories](https://user-images.githubusercontent.com/88196954/129946796-019bf6df-dd77-46e7-8154-9ba95c675446.png)
+
+What can we learn from these charts?
+* There is a positive correlation between distance and calories burned although it varies across intensities and distance traveled.
