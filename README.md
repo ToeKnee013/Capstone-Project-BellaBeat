@@ -45,11 +45,11 @@ With these metrics for the analysis set, the most important variables to look at
 What can we learn from these charts?
 * There is a positive correlation between distance and calories burned although it varies across intensities and distance traveled.
 ## Share
-![BellaBeat FitBit Analysis](https://user-images.githubusercontent.com/88196954/130270641-46d8166a-b56c-45bf-961d-3501ee28dee5.png)
+![BellaBeat FitBit Analysis](https://user-images.githubusercontent.com/88196954/130274675-346730c0-5af7-433d-8a96-a02241a4478b.png)
 [Click here to view the interactive dashboard in Tableau](https://public.tableau.com/views/GoogleDataAnalyticsCapstoneProjectBellaBeat/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link)
 
 Insights:
-* FitBit users tended to progressively decrease distance and calories burned throughout the course of 2 months according to the "Calories Burned April-May" boxplot graph
+* FitBit users on average, tended to progressively decrease distance and calories burned throughout the course of 2 months according to the "Calories Burned April-May" boxplot graph
   * April 2016 Boxplot:
     * Upper Whisker: 3,653
     * Upper Hinge: 2,799
@@ -65,3 +65,7 @@ Insights:
 * A Distinct correlation can be drawn from the Total Distance vs. Total Calories scatter plot 
   * R-Squared ≈ 0.6
   * P-value < 0.0001
+## Act
+Final reccomendations for marketing strategy:
+1. Promote an advertisment towards individuals seeking weight loss which encourages them to exercise with more intensity
+2. Integrate a software mechanic that promotes burning calories which rewards the customers.  i.e. earning points for staying consistent with target calories burned a week or month which can be spent to obtain in app cosmetics/avatars/etc.
