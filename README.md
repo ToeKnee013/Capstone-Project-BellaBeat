@@ -36,6 +36,7 @@ Assumptions for the analysis:
 * "Distance" doesn't have a specified metric system in this data therefore, I will still assume that the bigger the "distance" number, the greater the general distance is covered
 
 With these metrics for the analysis set, the most important variables to look at with the given data are *Distance* and *Calories*. In the end, I developed four simple charts for the analysis.
+
 ![Total Distance vs  Total Calories](https://user-images.githubusercontent.com/88196954/129946417-ccb9f333-d9eb-457c-93b2-0807cec587db.png)
 ![Total Light Active Distance vs  Total Light Active Calories](https://user-images.githubusercontent.com/88196954/129946767-2e83841b-59bc-4bb1-9601-72de51d441a6.png)
 ![Total Moderately Active Distance vs  Total Moderate Calories](https://user-images.githubusercontent.com/88196954/129946783-ee7a1bf5-6d64-4f59-83e1-da0b9e14b94c.png)
@@ -43,3 +44,6 @@ With these metrics for the analysis set, the most important variables to look at
 
 What can we learn from these charts?
 * There is a positive correlation between distance and calories burned although it varies across intensities and distance traveled.
+## Share
+![BellaBeat FitBit Analysis](https://user-images.githubusercontent.com/88196954/130270641-46d8166a-b56c-45bf-961d-3501ee28dee5.png)
+[Click here to view the interactive dashboard in Tableau](https://public.tableau.com/views/GoogleDataAnalyticsCapstoneProjectBellaBeat/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link)
