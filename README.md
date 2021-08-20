@@ -47,3 +47,21 @@ What can we learn from these charts?
 ## Share
 ![BellaBeat FitBit Analysis](https://user-images.githubusercontent.com/88196954/130270641-46d8166a-b56c-45bf-961d-3501ee28dee5.png)
 [Click here to view the interactive dashboard in Tableau](https://public.tableau.com/views/GoogleDataAnalyticsCapstoneProjectBellaBeat/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link)
+
+Insights:
+* FitBit users tended to progressively decrease distance and calories burned throughout the course of 2 months according to the "Calories Burned April-May" boxplot graph
+  * April 2016 Boxplot:
+    * Upper Whisker: 3,653
+    * Upper Hinge: 2,799
+    * Median: 2,221
+    * Lower Hinge: 1,942
+    * Lower Whisker: 1,495
+  * May 2016 Boxplot:
+    * Upper Whisker: 3,311
+    * Upper Hinge: 2,735
+    * Median: 2,135
+    * Lower Hinge: 1,865
+    * Lower Whisker: 1,237
+* A Distinct correlation can be drawn from the Total Distance vs. Total Calories scatter plot 
+  * R-Squared ≈ 0.6
+  * P-value < 0.0001
