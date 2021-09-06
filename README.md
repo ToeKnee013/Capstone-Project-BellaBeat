@@ -1,9 +1,9 @@
 # Google Data Analytics: Capstone Project
 ## BellaBeat
 ## Project Overview
-I am a junior analyst working for **Bellabeat**, a high-tech manufacturer of health-focused products for women. **Urška Sršen**, cofounder and Chief Creative Officer of Bellabeat, believes that analyzing smart device fitness data could help unlock new growth oppurtunities for the company. I have been asked to focus on one of Bellabeat's products and analyze smart device data to gain insight into how consumers are using their smart devices. I will use the insights discovered to help guide the companys marketing strategy and make high-level recommendations.
+I am a junior analyst working for **Bellabeat**, a high-tech manufacturer of health-focused products for women. **Urška Sršen**, cofounder and Chief Creative Officer of Bellabeat, believes that analyzing smart device fitness data could help unlock new growth opportunities for the company. I have been asked to focus on one of Bellabeat's products and analyze smart device data to gain insight into how consumers are using their smart devices. I will use the insights discovered to help guide the company's marketing strategy and make high-level recommendations.
 ## Ask
-Sršen the cofounder and Chief Creative Officer at Bellabeat, a tech manufacturer with health-focused womens products, is asking me to analze smart device usage in order to gain insight into how consumers use non-Bellebeat smart devices. She then wants me to select one Bellabeat product to apply insight to my final presentation.
+Sršen the co-founder and Chief Creative Officer at Bellabeat, a tech manufacturer with health-focused womens products, is asking me to analyze smart device usage in order to gain insight into how consumers use non-Bellebeat smart devices. She then wants me to select one Bellabeat product to apply insight to my final presentation.
 1. What are some trends in smart device usage?
 2. How could these trends apply to Bellabeat customers?
 3. How could these trends help influence Bellabeat marketing strategy?
@@ -17,7 +17,7 @@ Urška Sršen encourages me to use public data on Kaggle that explores smart dev
 ## Process
 The tools used for the cleaning, analysis and sharing are BigQuery: SQL, Google Sheets and Tableau
 Refer to the [cleaning report](https://github.com/ToeKnee013/Capstone-Project-BellaBeat/blob/main/Cleaning%20Report.md) for more details on the cleaning.
-To summarize, I made the follwing changes:
+To summarize, I made the following changes:
 * Filtered out any columns that were unrelated to the analysis
 * Made a new table named "Working_Table"
 * In the new table, I filtered out any rows where calories and distance equal zero ```WHERE Calories>0 AND TotalDistance>0```
@@ -66,6 +66,6 @@ Insights:
   * R-Squared ≈ 0.6
   * P-value < 0.0001
 ## Act
-Final reccomendations for marketing strategy:
-1. Promote an advertisment towards individuals seeking weight loss which encourages them to exercise with more intensity
-2. Integrate a software mechanic that promotes burning calories which rewards the customers.  i.e. earning points for staying consistent with target calories burned a week or month which can be spent to obtain in app cosmetics/avatars/etc.
+Final recommendations for marketing strategy:
+1. Promote an advertisement towards individuals seeking weight loss which encourages them to exercise with more intensity
+2. Integrate a software mechanic that promotes burning calories which rewards the customers.  i.e. earning points for staying consistent with target calories burned a week or month which can be spent to obtain in app cosmetics/avatars/etc or reward points used to purchase groceries/gas/gift cards/etc.
