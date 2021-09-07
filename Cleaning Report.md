@@ -23,32 +23,40 @@ WHERE
   OR SedentaryMinutes IS NULL
   OR Calories IS NULL
   ```
-There were 0 ```NULL``` values, it appears the dataset is already relatively clean
+There were 0 ```NULL``` values, it appears the dataset is already relatively clean.
 
-2.   I selected all the columns from the table that are relevant to the trends I wish to identify. Then I make a new table named "Working_Table"
-```
-SELECT
-  Id,
-  ActivityDate,
-  TotalDistance,
-  VeryActiveDistance,
-  ModeratelyActiveDistance,
-  LightActiveDistance,
-  SedentaryActiveDistance,
-  Calories
-FROM
-  `bellabeat-case-study-321019.BellaBeat_Analysis.Daily_Activity`
-```
-3.   I filtered out any rows where total distance and calories equaled to 0 because if I hadn't, that would be an anomaly which could lead to less accurate findings in data trends.
+2.   Next up, lets check for any duplicate values. Intuitively, I compared the following two queries.
 ```
 SELECT
   *
 FROM
-  `bellabeat-case-study-321019.BellaBeat_Analysis.Working_Table`
-WHERE
-  Calories>0
-  AND TotalDistance>0
+  `bellabeat-case-study-321019.BellaBeat_Analysis.Daily_Activity` 
 ```
+```
+SELECT
+  *
+FROM
+  `bellabeat-case-study-321019.BellaBeat_Analysis.Daily_Activity` 
+```
+Both the tables that were returned gave me 940 rows, so I imagined there were no duplicates. To Double check, I found some resources online and produced this code.
+```
+USING
+  COUNT
+SELECT
+  Id,
+  ActivityDate,
+  COUNT(*)
+FROM
+  `bellabeat-case-study-321019.BellaBeat_Analysis.Daily_Activity`
+GROUP BY
+  Id,
+  ActivityDate
+HAVING
+  COUNT(*) > 1
+```
+This code returned no values at all using the ```COUNT(*) > 1``` condition. This means there are no duplicates in the table because not a single value was returned that contained a higher ```COUNT``` than 1.
+
+
 4.   I then downloaded and prepare to export the data into Google Sheets for the final steps of the cleaning process
 
 [FitBit_Data.csv](https://github.com/ToeKnee013/Capstone-Project-BellaBeat/files/6978276/FitBit_Data.csv)
