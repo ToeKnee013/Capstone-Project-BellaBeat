@@ -77,6 +77,7 @@ Finally I prepare a new table to be used for analysis using the following query.
 ```
 SELECT
   Id,
+  ActivityDate,
   TotalSteps,
   CAST(TotalDistance AS INT64) AS Distance,
   + CAST(VeryActiveDistance AS INT64) AS VeryActiveDistance,
