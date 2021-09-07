@@ -1,5 +1,5 @@
 # Detailed Cleaning Report
-I will break down the actions I took to clean the table in steps.
+I will break down the actions I took to clean the dataset in steps.
 ## Steps
 ### 1. NULL VALUES
 First I check for any ```NULL``` values in the "Daily_Activity" table because it contains all the columns from the dataset merged into one.
