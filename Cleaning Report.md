@@ -1,25 +1,55 @@
 # Cleaning Report
 I will break down the actions I took to clean the table in steps.
 ## Steps
-1.   I selected all the columns from the table that are relevant to the trends I wish to identify. Then I make a new table named "Working_Table"
+1.   First I check for any ```NULL``` values in the "Daily_Activity" table because it contains all the columns from the dataset merged into one.
 ```
-SELECT Id,
-ActivityDate,
-TotalDistance,
-VeryActiveDistance,
-ModeratelyActiveDistance,
-LightActiveDistance,
-SedentaryActiveDistance,
-Calories
-FROM `bellabeat-case-study-321019.BellaBeat_Analysis.Daily_Activity`
+SELECT
+  *
+FROM
+  `bellabeat-case-study-321019.BellaBeat_Analysis.Daily_Activity`
+WHERE
+  Id IS NULL
+  OR ActivityDate IS NULL
+  OR TotalSteps IS NULL
+  OR TrackerDistance IS NULL
+  OR LoggedActivitiesDistance IS NULL
+  OR VeryActiveDistance IS NULL
+  OR ModeratelyActiveDistance IS NULL
+  OR LightActiveDistance IS NULL
+  OR SedentaryActiveDistance IS NULL
+  OR VeryActiveMinutes IS NULL
+  OR FairlyActiveMinutes IS NULL
+  OR LightlyActiveMinutes IS NULL
+  OR SedentaryMinutes IS NULL
+  OR Calories IS NULL
+  ```
+There were 0 ```NULL``` values, it appears the dataset is already relatively clean
+
+2.   I selected all the columns from the table that are relevant to the trends I wish to identify. Then I make a new table named "Working_Table"
 ```
-2.   I filtered out any rows where total distance and calories equaled to 0 because if I hadn't, that would be an anomaly which could lead to less accurate findings in data trends.
+SELECT
+  Id,
+  ActivityDate,
+  TotalDistance,
+  VeryActiveDistance,
+  ModeratelyActiveDistance,
+  LightActiveDistance,
+  SedentaryActiveDistance,
+  Calories
+FROM
+  `bellabeat-case-study-321019.BellaBeat_Analysis.Daily_Activity`
 ```
-SELECT *
-FROM `bellabeat-case-study-321019.BellaBeat_Analysis.Working_Table`
-WHERE Calories>0 AND TotalDistance>0
+3.   I filtered out any rows where total distance and calories equaled to 0 because if I hadn't, that would be an anomaly which could lead to less accurate findings in data trends.
 ```
-3.   I then downloaded and prepare to export the data into Google Sheets for the final steps of the cleaning process
+SELECT
+  *
+FROM
+  `bellabeat-case-study-321019.BellaBeat_Analysis.Working_Table`
+WHERE
+  Calories>0
+  AND TotalDistance>0
+```
+4.   I then downloaded and prepare to export the data into Google Sheets for the final steps of the cleaning process
 
 [FitBit_Data.csv](https://github.com/ToeKnee013/Capstone-Project-BellaBeat/files/6978276/FitBit_Data.csv)
 
