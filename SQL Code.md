@@ -52,6 +52,7 @@ FROM
   # Creating a new table analysis
 SELECT
   Id,
+  ActivityDate,
   TotalSteps,
   CAST(TotalDistance AS INT64) AS Distance,
   + CAST(VeryActiveDistance AS INT64) AS VeryActiveDistance,
