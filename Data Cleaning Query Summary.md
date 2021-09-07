@@ -20,8 +20,8 @@ WHERE
   OR SedentaryMinutes IS NULL
   OR Calories IS NULL
   OR Calories>0
-
-
+```
+```
   # Checking for duplicates
 SELECT
   Id,
@@ -34,8 +34,8 @@ GROUP BY
   ActivityDate
 HAVING
   COUNT(*) > 1 
-
-
+```
+```
   #Converting decimals to integers
 SELECT
   CAST(TotalDistance AS INT64) AS TotalDistance2,
@@ -46,8 +46,8 @@ SELECT
   + CAST(SedentaryActiveDistance AS INT64) AS SedentaryActiveDistance
 FROM
   `bellabeat-case-study-321019.BellaBeat_Analysis.Daily_Activity` 
-  
-  
+  ```
+  ```
   # Creating a new table analysis
 SELECT
   Id,
