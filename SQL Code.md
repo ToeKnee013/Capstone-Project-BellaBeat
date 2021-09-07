@@ -1,3 +1,5 @@
+# Data Cleaning
+
 ```
   #Searching for NULL values
 SELECT
@@ -19,7 +21,6 @@ WHERE
   OR LightlyActiveMinutes IS NULL
   OR SedentaryMinutes IS NULL
   OR Calories IS NULL
-  OR Calories>0
 ```
 ```
   # Checking for duplicates
@@ -66,3 +67,4 @@ FROM
   `bellabeat-case-study-321019.BellaBeat_Analysis.Daily_Activity`
   
 ```
+# Data Analysis
