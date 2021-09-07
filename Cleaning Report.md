@@ -58,22 +58,40 @@ HAVING
 ```
 This code returned no values at all using the ```COUNT(*) > 1``` condition. This means there are no duplicates in the table because not a single value was returned that contained a higher ```COUNT``` than 1.
 
-### 3. FORMAT
+### 3. FORMATTING
 Following up, lets convert those messy decimal values into whole numbers using ```CAST``` and ```INT64```.
 ```
 SELECT
-  TotalDistance,
-  TrackerDistance,
-  CAST(TotalDistance AS INT64) AS TotalDistance2,
-  + CAST(VeryActiveDistance AS INT64) AS VeryActiveDistance2,
+  CAST(TotalDistance AS INT64) AS TotalDistance,
+  + CAST(VeryActiveDistance AS INT64) AS VeryActiveDistance,
   + CAST(ModeratelyActiveDistance AS INT64) AS ModeratelyActiveDistance,
-  + CAST(LightActiveDistance AS INT64) AS ModeratelyActiveDistance,
   + CAST(LightActiveDistance AS INT64) AS LightActiveDistance,
   + CAST(SedentaryActiveDistance AS INT64) AS SedentaryActiveDistance
 FROM
   `bellabeat-case-study-321019.BellaBeat_Analysis.Daily_Activity`
 ```
 Note that from here on out we will be working with aproximate whole numbers.
+
+### 4. CREATING A NEW TABLE
+Finally I prepare a new table to be used for analysis using the following query.
+```
+SELECT
+  Id,
+  TotalSteps,
+  CAST(TotalDistance AS INT64) AS Distance,
+  + CAST(VeryActiveDistance AS INT64) AS VeryActiveDistance,
+  + CAST(ModeratelyActiveDistance AS INT64) AS ModeratelyActiveDistance,
+  + CAST(LightActiveDistance AS INT64) AS LightlyActiveDistance,
+  + CAST(SedentaryActiveDistance AS INT64) AS SedentaryActiveDistance,
+  VeryActiveMinutes,
+  FairlyActiveMinutes AS ModeratelyActiveMinutes,
+  LightlyActiveMinutes,
+  SedentaryMinutes AS SedentaryActiveMinutes,
+  Calories
+FROM
+  `bellabeat-case-study-321019.BellaBeat_Analysis.Daily_Activity`
+```
+
 
 4.   I then downloaded and prepare to export the data into Google Sheets for the final steps of the cleaning process
 
