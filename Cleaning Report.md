@@ -1,7 +1,8 @@
 # Cleaning Report
 I will break down the actions I took to clean the table in steps.
 ## Steps
-1.   First I check for any ```NULL``` values in the "Daily_Activity" table because it contains all the columns from the dataset merged into one.
+### 1. NULL VALUES
+First I check for any ```NULL``` values in the "Daily_Activity" table because it contains all the columns from the dataset merged into one.
 ```
 SELECT
   *
@@ -25,7 +26,8 @@ WHERE
   ```
 There were 0 ```NULL``` values, it appears the dataset is already relatively clean.
 
-2.   Next up, lets check for any duplicate values. Intuitively, I compared the following two queries.
+### 2. DUPLICATES
+Next up, lets check for any duplicate values. Intuitively, I compared the following two queries.
 ```
 SELECT
   *
@@ -56,6 +58,22 @@ HAVING
 ```
 This code returned no values at all using the ```COUNT(*) > 1``` condition. This means there are no duplicates in the table because not a single value was returned that contained a higher ```COUNT``` than 1.
 
+### 3. FORMAT
+Following up, lets convert those messy decimal values into whole numbers using ```CAST``` and ```INT64```.
+```
+SELECT
+  TotalDistance,
+  TrackerDistance,
+  CAST(TotalDistance AS INT64) AS TotalDistance2,
+  + CAST(VeryActiveDistance AS INT64) AS VeryActiveDistance2,
+  + CAST(ModeratelyActiveDistance AS INT64) AS ModeratelyActiveDistance,
+  + CAST(LightActiveDistance AS INT64) AS ModeratelyActiveDistance,
+  + CAST(LightActiveDistance AS INT64) AS LightActiveDistance,
+  + CAST(SedentaryActiveDistance AS INT64) AS SedentaryActiveDistance
+FROM
+  `bellabeat-case-study-321019.BellaBeat_Analysis.Daily_Activity`
+```
+Note that from here on out we will be working with aproximate whole numbers.
 
 4.   I then downloaded and prepare to export the data into Google Sheets for the final steps of the cleaning process
 
