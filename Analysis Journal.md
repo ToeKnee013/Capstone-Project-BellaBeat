@@ -107,3 +107,10 @@ This chart tells us there is a strong correlation between very active distance a
 ![SUM of Distance vs  SUM of Steps](https://user-images.githubusercontent.com/88196954/132764177-5730be32-6668-43b3-99d3-4252bb525087.png)
 
 So we can check the integrity of our data, this chart says there is a very strong correlation between distance and steps. Makes sense.
+
+#### Insight: There seems to be a correleation between distance traveled at a certain intensity vs calories burned at that respective intensity. We can note that the calories burned at a specfic intensity progressively increases along with the intensity of the distance traveled.
+* Light Active Trendline = 0.218
+* Moderate Active Trendline = 0.692
+* Very Active Trendline = 0.861
+
+In regards to the SUM of Distance vs. SUM of Calories chart, we can infer that there is a positive trend amongst the different intensities but may be slightly skewed due to the light active chart.
