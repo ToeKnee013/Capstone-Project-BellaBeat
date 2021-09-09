@@ -92,4 +92,8 @@ SELECT
 FROM
   `bellabeat-case-study-321019.BellaBeat_Analysis.Daily_Activity`
 ```
-## Now that we have our table, head on over to [Analysis Journal](https://github.com/ToeKnee013/Capstone-Project-BellaBeat/blob/main/Analysis%20Journal.md) for the analysis!
+
+### 5. EXPORT
+It is time we exported the table into spreadsheets for further analysis!
+* Check out the [spreadsheet](https://docs.google.com/spreadsheets/d/13DV9aDM-sPMUAaUXHZQ0kvvuuSA9kTYpFmW2J4SuLqk/edit#gid=1688684425)
+* For details of the analysis, check out the [Analysis Journal](https://github.com/ToeKnee013/Capstone-Project-BellaBeat/blob/main/Analysis%20Journal.md)
