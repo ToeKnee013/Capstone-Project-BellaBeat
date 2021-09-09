@@ -32,10 +32,12 @@ WHERE
   AND Distance=0 
   ```
   This query returned 4 rows with distance ```AND``` calories equating to 0.
+  
   ![#RestDays](https://user-images.githubusercontent.com/88196954/132696785-7fe7a3af-30cd-4cbe-a1fa-1dd855cadae7.PNG)
 **Insight : An interesting find is that the SedentaryActiveMinutes for each row equals to 1440 minutes.
 Why is the number 1440 so important? In a given day, there are 1440 minutes. We know this because if we take 1440 (minutes in a day) and divide it by 60 (minutes in an hour), we get 24 which is how many hours there are in a day. With this information, we can gauge rest times that were taken.**
 
+* Let's look for the average SedentaryActiveMinutes
 ```
 SELECT
   AVG(SedentaryActiveMinutes)
@@ -46,7 +48,7 @@ FROM
  
 Great! This query gives us the average rest time for all the participants.
 
-Now we can work with the average and find some interesting details.
+* Now we can work with the average and find some interesting details.
 ```
   SELECT
   SUM
@@ -62,9 +64,9 @@ ORDER BY TotalCalories
 ```
 **Result: 989,701**
 
-This query gives us the ```SUM``` of calories for the participants who's average calories fell under the average of 991. In other words, the total calories burned amongst all instances which are considered more active.
+This query gives us the ```SUM``` of calories for the participants who had less rest times in minutes fell under the average of 991 minutes. In other words.
 
-Let's check out the opposite.
+* Let's check out the opposite.
 ```
   SELECT
   SUM
@@ -80,4 +82,8 @@ ORDER BY TotalCalories
 ```
 **Result: 1172705**
 
-Interesting! It seems like the participants who's average fell above the Sedentary Active Minutes burned more calories!
+Interesting! It seems like the participants who had more rest time in minutes than the average SedentaryActiveMinutes of 991 burned more calories!
+
+**Insight: In this instance, it seemes like particpants that had overall longer rest periods ended up burning more calories in total compared to the participants that had less overall rest periods.**
+
+* This leads us to another question, ***what other variables can cause participants to lose more calories?*** Let's explore levels of intensities.
