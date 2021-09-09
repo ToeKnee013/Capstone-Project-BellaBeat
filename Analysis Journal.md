@@ -17,13 +17,13 @@ SELECT
 FROM
   `bellabeat-case-study-321019.BellaBeat_Analysis.BellaBeat_Table_Clean`
 ORDER BY
-  ActivityDate ASC
+  ActivityDate ASC 
   ```
   This query resulted in 31 rows with the dates 2016-04-12 to 2016-05-12 implying that the data falls anywhere in that range.
   
   * I then wanted to find who took rest days
   ```
-  SELECT
+SELECT
   *
 FROM
   `bellabeat-case-study-321019.BellaBeat_Analysis.BellaBeat_Table_Clean`
@@ -41,8 +41,8 @@ Why is the number 1440 so important? In a given day, there are 1440 minutes. We 
 ```
 SELECT
   AVG(SedentaryActiveMinutes)
-FROM 
-  `bellabeat-case-study-321019.BellaBeat_Analysis.BellaBeat_Table_Clean`
+FROM
+  `bellabeat-case-study-321019.BellaBeat_Analysis.BellaBeat_Table_Clean` 
 ```
  **AVG = 991 minutes**
  
@@ -50,17 +50,17 @@ Great! This query gives us the average rest time for all the participants.
 
 * Now we can work with the average and find some interesting details.
 ```
+SELECT
+  SUM (Calories) AS TotalCalories,
+FROM (
   SELECT
-  SUM
-(Calories) AS TotalCalories,
+    *
   FROM
-(SELECT 
-  *
-FROM 
-  `bellabeat-case-study-321019.BellaBeat_Analysis.BellaBeat_Table_Clean`
-WHERE 
-  SedentaryActiveMinutes < 991)
-ORDER BY TotalCalories  
+    `bellabeat-case-study-321019.BellaBeat_Analysis.BellaBeat_Table_Clean`
+  WHERE
+    SedentaryActiveMinutes < 991)
+ORDER BY
+  TotalCalories  
 ```
 **Result: 989,701**
 
@@ -68,17 +68,17 @@ This query gives us the ```SUM``` of calories for the participants who had less 
 
 * Let's check out the opposite.
 ```
+SELECT
+  SUM (Calories) AS TotalCalories,
+FROM (
   SELECT
-  SUM
-(Calories) AS TotalCalories,
+    *
   FROM
-(SELECT 
-  *
-FROM 
-  `bellabeat-case-study-321019.BellaBeat_Analysis.BellaBeat_Table_Clean`
-WHERE 
-  SedentaryActiveMinutes > 991)
-ORDER BY TotalCalories
+    `bellabeat-case-study-321019.BellaBeat_Analysis.BellaBeat_Table_Clean`
+  WHERE
+    SedentaryActiveMinutes > 991)
+ORDER BY
+  TotalCalories
 ```
 **Result: 1172705**
 
