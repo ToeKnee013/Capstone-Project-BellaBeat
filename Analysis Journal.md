@@ -87,3 +87,23 @@ Interesting! It seems like the participants who had more rest time in minutes th
 **Insight: In this instance, it seemes like particpants that had overall longer rest periods ended up burning more calories in total compared to the participants that had less overall rest periods.**
 
 * This leads us to another question, ***what other variables can cause participants to lose more calories?*** Let's explore levels of intensities.
+
+![SUM of Distance vs  SUM of Calories](https://user-images.githubusercontent.com/88196954/132764015-c73f4091-94bd-4164-b1a7-3c167dc1d112.png)
+
+This chart tells us that there really isn't any big correlations between distance traveled and calories burned.
+
+![SUM of Lightly Active Distance vs  SUM of Lightly Active Calories](https://user-images.githubusercontent.com/88196954/132764156-e41a9b7a-2854-4b01-8646-b3cee593c094.png)
+
+This chart tells us there is a weak correlation between light active distance and light active calories burned.
+
+![SUM of Moderately Active Distance vs  SUM of Moderately Active Calories](https://user-images.githubusercontent.com/88196954/132764164-2f208bd4-28c2-4666-b2ba-9780d8be0a90.png)
+
+This chart tells us there is a stronger correlation betweeen moderate active distance and moderate active calories burned compared to the previous one.
+
+![SUM of Very Active Distance vs  SUM of Very Active Calories](https://user-images.githubusercontent.com/88196954/132764168-033b2744-a6d0-47fb-8f5f-12c80f6585d3.png)
+
+This chart tells us there is a strong correlation between very active distance and very active calories burned!
+
+![SUM of Distance vs  SUM of Steps](https://user-images.githubusercontent.com/88196954/132764177-5730be32-6668-43b3-99d3-4252bb525087.png)
+
+So we can check the integrity of our data, this chart says there is a very strong correlation between distance and steps. Makes sense.
