@@ -36,3 +36,48 @@ WHERE
 **Insight : An interesting find is that the SedentaryActiveMinutes for each row equals to 1440 minutes.
 Why is the number 1440 so important? In a given day, there are 1440 minutes. We know this because if we take 1440 (minutes in a day) and divide it by 60 (minutes in an hour), we get 24 which is how many hours there are in a day. With this information, we can gauge rest times that were taken.**
 
+```
+SELECT
+  AVG(SedentaryActiveMinutes)
+FROM 
+  `bellabeat-case-study-321019.BellaBeat_Analysis.BellaBeat_Table_Clean`
+```
+ **AVG = 991 minutes**
+ 
+Great! This query gives us the average rest time for all the participants.
+
+Now we can work with the average and find some interesting details.
+```
+  SELECT
+  SUM
+(Calories) AS TotalCalories,
+  FROM
+(SELECT 
+  *
+FROM 
+  `bellabeat-case-study-321019.BellaBeat_Analysis.BellaBeat_Table_Clean`
+WHERE 
+  SedentaryActiveMinutes < 991)
+ORDER BY TotalCalories  
+```
+**Result: 989,701**
+
+This query gives us the ```SUM``` of calories for the participants who's average calories fell under the average of 991. In other words, the total calories burned amongst all instances which are considered more active.
+
+Let's check out the opposite.
+```
+  SELECT
+  SUM
+(Calories) AS TotalCalories,
+  FROM
+(SELECT 
+  *
+FROM 
+  `bellabeat-case-study-321019.BellaBeat_Analysis.BellaBeat_Table_Clean`
+WHERE 
+  SedentaryActiveMinutes > 991)
+ORDER BY TotalCalories
+```
+**Result: 1172705**
+
+Interesting! It seems like the participants who's average fell above the Sedentary Active Minutes burned more calories!
