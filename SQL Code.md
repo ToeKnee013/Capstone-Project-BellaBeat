@@ -69,3 +69,59 @@ FROM
   
 ```
 # Data Analysis
+
+```
+  # Range of activity dates
+SELECT
+  DISTINCT ActivityDate
+FROM
+  `bellabeat-case-study-321019.BellaBeat_Analysis.BellaBeat_Table_Clean`
+ORDER BY
+  ActivityDate ASC 
+```
+```
+  # Finding who took rest days
+SELECT
+  *
+FROM
+  `bellabeat-case-study-321019.BellaBeat_Analysis.BellaBeat_Table_Clean`
+WHERE
+  Calories=0
+  AND Distance=0 
+  ```
+  ```
+    # Average SedentaryActiveMinutes
+SELECT
+  AVG(SedentaryActiveMinutes)
+FROM
+  `bellabeat-case-study-321019.BellaBeat_Analysis.BellaBeat_Table_Clean`
+```
+```
+  # Total Calories of participants where they got a lower than AVG SedentaryActiveMinutes
+SELECT
+  SUM (Calories) AS TotalCalories,
+FROM (
+  SELECT
+    *
+  FROM
+    `bellabeat-case-study-321019.BellaBeat_Analysis.BellaBeat_Table_Clean`
+  WHERE
+    SedentaryActiveMinutes < 991)
+ORDER BY
+  TotalCalories
+```
+```
+  # Total Calories of participants where they got a higher than AVG SedentaryActiveMinutes
+SELECT
+  SUM (Calories) AS TotalCalories,
+FROM (
+  SELECT
+    *
+  FROM
+    `bellabeat-case-study-321019.BellaBeat_Analysis.BellaBeat_Table_Clean`
+  WHERE
+    SedentaryActiveMinutes > 991)
+ORDER BY
+  TotalCalories
+```
+
