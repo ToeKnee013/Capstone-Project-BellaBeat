@@ -35,7 +35,7 @@ FROM
   `bellabeat-case-study-321019.BellaBeat_Analysis.Daily_Activity` 
 ```
 ```
-SELECT
+SELECT DISTINCT
   *
 FROM
   `bellabeat-case-study-321019.BellaBeat_Analysis.Daily_Activity` 
