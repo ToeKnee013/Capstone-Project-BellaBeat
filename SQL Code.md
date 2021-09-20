@@ -21,8 +21,9 @@ WHERE
   OR LightlyActiveMinutes IS NULL
   OR SedentaryMinutes IS NULL
   OR Calories IS NULL
-```
-```
+  OR Calories>0
+
+
   # Checking for duplicates
 SELECT
   Id,
@@ -35,8 +36,8 @@ GROUP BY
   ActivityDate
 HAVING
   COUNT(*) > 1 
-```
-```
+
+
   #Converting decimals to integers
 SELECT
   CAST(TotalDistance AS INT64) AS TotalDistance2,
@@ -47,8 +48,8 @@ SELECT
   + CAST(SedentaryActiveDistance AS INT64) AS SedentaryActiveDistance
 FROM
   `bellabeat-case-study-321019.BellaBeat_Analysis.Daily_Activity` 
-  ```
-  ```
+  
+  
   # Creating a new table analysis
 SELECT
   Id,
@@ -71,15 +72,15 @@ FROM
 # Data Analysis
 
 ```
-  # Range of activity dates
+  # RANGE OF activity dates
 SELECT
   DISTINCT ActivityDate
 FROM
   `bellabeat-case-study-321019.BellaBeat_Analysis.BellaBeat_Table_Clean`
 ORDER BY
   ActivityDate ASC 
-```
-```
+  
+
   # Finding who took rest days
 SELECT
   *
@@ -88,15 +89,15 @@ FROM
 WHERE
   Calories=0
   AND Distance=0 
-  ```
-  ```
-    # Average SedentaryActiveMinutes
+  
+  
+  # Average SedentaryActiveMinutes
 SELECT
   AVG(SedentaryActiveMinutes)
 FROM
-  `bellabeat-case-study-321019.BellaBeat_Analysis.BellaBeat_Table_Clean`
-```
-```
+  `bellabeat-case-study-321019.BellaBeat_Analysis.BellaBeat_Table_Clean` 
+  
+
   # Total Calories of participants where they got a lower than AVG SedentaryActiveMinutes
 SELECT
   SUM (Calories) AS TotalCalories,
@@ -108,9 +109,9 @@ FROM (
   WHERE
     SedentaryActiveMinutes < 991)
 ORDER BY
-  TotalCalories
-```
-```
+  TotalCalories 
+
+  
   # Total Calories of participants where they got a higher than AVG SedentaryActiveMinutes
 SELECT
   SUM (Calories) AS TotalCalories,
@@ -124,4 +125,3 @@ FROM (
 ORDER BY
   TotalCalories
 ```
-
